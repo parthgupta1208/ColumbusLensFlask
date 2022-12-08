@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scan</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+  *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #050801;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+    }
+  
+    h1 {
+      position: absolute;
+      text-align:center;
+      color: blueviolet;
+      font-weight: bolder;
+      font-family: 'Raleway',monospace;
+      display: flex;
+      top: 70px;
+  }
+  a {
+  border-radius: 20px;
+  border-style: solid;
+  position: relative;
+  display: inline-flex;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  }
+  
+  a:hover {
+      background: #03e9f4;
+      color: #050801;
+      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+  
+   a:nth-child(1) {
+      filter: hue-rotate(270deg);
+    }
+    
+    a:nth-child(2) {
+      filter: hue-rotate(150deg);
+    }
+  </style>
+</head>
+
+<body>
+
+<a href=/voicesearch>Press this and start Speaking</a>
+
+</body>
+</html>
