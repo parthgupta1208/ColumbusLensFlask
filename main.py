@@ -42,7 +42,11 @@ def speak():
         query=query.lower()
         webbrowser.open_new('https://www.google.com/search?q='+query)
     except:
-        pass 
+        goo1=Tk()
+        goo1.geometry("1x1")
+        messagebox.showerror('Could Not Recognize','The Spoken audio was either not captured or not recognised as an english phrase')
+        goo1.destroy()
+        goo1.mainloop() 
 
 image=""
 
@@ -59,7 +63,7 @@ def imgimgsrch():
     heh.destroy()
     heh.mainloop()
     filelnk = c.upload(filepath = img)
-    webbrowser.open_new('https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:'+filelnk.url)
+    webbrowser.open_new('https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:'+filelnk.url+'&sim=1')
     return  render_template('index.html')
 
 @app.route('/camimgsrch')
@@ -78,7 +82,7 @@ def camimgsrch():
     cv2.destroyAllWindows()
     image="tempim.jpg"
     filelnk = c.upload(filepath = image)
-    webbrowser.open_new('https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:'+filelnk.url)
+    webbrowser.open_new('https://www.bing.com/images/search?view=detailv2&iss=sbi&form=SBIIRP&sbisrc=UrlPaste&q=imgurl:'+filelnk.url+'&sim=1')
     return  render_template('index.html')
 
 @app.route('/camtext')
